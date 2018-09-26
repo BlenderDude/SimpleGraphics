@@ -19,7 +19,7 @@ class Node : public Location {
 private:
     short width;
     short height;
-    Node *parent; // The parent node that has this node as a child
+    Node *parent = nullptr; // The parent node that has this node as a child
     vector<Node *> children; // All of the children that will paint over the node
     vector<vector<string>> pixels; // The pixels that represent the display
     Position *position = nullptr;
@@ -47,6 +47,10 @@ public:
     void setParent(Node *parent) { this->parent = parent; }
 
     Node *getParent() { return this->parent; }
+
+    short getGlobalX();
+
+    short getGlobalY();
 
     vector<Node *> getChildren() { return this->children; }
 

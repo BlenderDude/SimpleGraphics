@@ -5,3 +5,5 @@ cmake-build-debug
 .idea
 
 a.out
+
+*.o

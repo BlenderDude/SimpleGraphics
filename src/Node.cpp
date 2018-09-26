@@ -113,6 +113,43 @@ void Node::addChild(Node *child, Position *position) {
     child->calculatePosition(position);
 }
 
+short Node::getGlobalX() {
+
+    short x = this->getX();
+
+    Node *parent = this->getParent();
+
+    while (true) {
+        if (parent == nullptr) {
+            break;
+        }
+
+        x += parent->getX();
+
+        parent = parent->getParent();
+    }
+
+    return x;
+}
+
+short Node::getGlobalY() {
+    short y = this->getY();
+
+    Node *parent = this->getParent();
+
+    while (true) {
+        if (parent == nullptr) {
+            break;
+        }
+
+        y += parent->getX();
+
+        parent = parent->getParent();
+    }
+
+    return y;
+}
+
 /**
  * Determine what a certain pixel should render based on the node itself and its children
  * @param requestedX
