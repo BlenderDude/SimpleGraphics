@@ -5,7 +5,7 @@
 #include "Grid.h"
 
 /**
- * checkSize is a funciton that makes sure the terminal window is wide enough to paint the canvas
+ * checkSize is a function that makes sure the terminal window is wide enough to paint the canvas
  */
 void Grid::checkSize() {
     // Store the instructions

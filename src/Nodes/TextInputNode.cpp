@@ -28,7 +28,7 @@ string TextInputNode::getInput() {
 
     Position *position = new Position();
 
-    position->setXOffset(this->getWidth() + 1);
+    position->setXOffset(this->getWidth());
 
     this->addChild(inputNode, position);
 
